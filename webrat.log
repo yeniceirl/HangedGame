@@ -1,0 +1,28 @@
+# Logfile created on 2018-12-12 15:17:29 -0400 by logger.rb/61378
+D, [2018-12-12T15:17:29.734522 #32808] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:18:32.777449 #20248] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:21:18.237053 #29308] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:25:03.743856 #30300] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:27:29.888853 #18884] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:29:06.763313 #29160] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:30:02.682150 #33200] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:30:18.803477 #19216] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:31:51.482755 #30424] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:32:31.594564 #10060] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:32:31.652450 #10060] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T15:56:14.740466 #35272] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:56:14.804072 #35272] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana verde"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T15:57:35.466546 #35272] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:57:35.528857 #35272] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana verde"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T15:58:26.359301 #30620] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:58:26.423926 #30620] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana verde"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T15:59:55.093522 #35332] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T15:59:55.157993 #35332] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana verde"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T16:02:26.954037 #34376] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T16:02:27.017506 #34376] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana verde"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T16:05:33.557352 #34160] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T16:05:33.622062 #34160] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T16:06:23.924488 #29116] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T16:06:23.992115 #29116] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2018-12-12T16:10:12.725275 #34728] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2018-12-12T16:10:12.796819 #34728] DEBUG -- : REQUESTING PAGE: POST /jugar with {"palabraSecreta"=>"manzana"} and HTTP headers {"HTTP_REFERER"=>"/"}

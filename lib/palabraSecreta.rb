@@ -1,9 +1,11 @@
 class PalabraSecreta
-  def initiliaze(palabra)
+  def initialize(palabra)
     @palabraSecreta = palabra
   end
   
   def validarPalabra()
     @palabraSecreta.include? ' '
   end
+  
+  
 end

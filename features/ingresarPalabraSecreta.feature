@@ -3,8 +3,10 @@ Feature: Ingresar Palabra Secreta
     quiero: ingresar palabras
     para: poder iniciar el juego
     
-    Scenario: Ingresar palabra secreta con espacios
+    Scenario: Ingresar palabra secreta
         Given visito la pagina principal
         When ingreso la palabra "manzana" en el campo "palabraSecreta"
          And presionar el boton "Jugar"
-        Then deberia ver un mensaje "Bienvenido"
+        Then deberia ver un mensaje "El Ahorcado"
+        
+ 

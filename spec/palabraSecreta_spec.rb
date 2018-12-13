@@ -9,5 +9,11 @@ describe PalabraSecreta do
 	# palabra = PalabraSecreta.new("banana")
 	# palabra.sustituirLetra("a").should == "_a_a_a"
 	#end
+
+	it "deberia actualizar el estado actual" do
+     palabraSecreta = PalabraSecreta.new("banana")
+     palabraSecreta.validarLetra("E").should == false
+	end
 	
 end
+

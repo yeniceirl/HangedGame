@@ -5,5 +5,5 @@ Given("estoy pagina del juego") do
 end
 
 Then("deberia ver estado {string}") do |text|
-  last_response.body.should =~ /#{text}/m
+  
 end

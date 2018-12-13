@@ -3,10 +3,26 @@ class PalabraSecreta
     @palabraSecreta = palabra
     @restante = 6
     @errores = 0
+    @palabraSecretaConRayas = ""
+    #@palabraSecreta.each_byte do |i|
+     #  @palabraSecretaConRayas = @palabraSecretaConRayas + "_"
+    #end
+  end
+    
+  def cantidadLetras()
+    cadena = ""
+    @palabraSecreta.each_byte do |i|
+       cadena = cadena + "_ "
+    end
+    cadena
   end
   
-  def validarPalabra()
-    @palabraSecreta.include? ' '
+  def sustituirLetra(letra)
+    indice = @palabraSecreta.index(letra)
+    while indice != nil do
+        @palabraSecretaConRayas[indice] = letra
+    end
+    @palabraSecretaConRayas
   end
   
   def validarLetra(letra)

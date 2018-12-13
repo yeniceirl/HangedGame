@@ -8,12 +8,14 @@ get '/' do
 end
 post '/jugar' do
   palabra  = params[:palabraSecreta]
-  @palabraS = PalabraSecreta.new(palabra)
+  @@palabraS = PalabraSecreta.new(palabra)
+  @palabraLinea = @@palabraS.cantidadLetras()
   erb :jugar
 end
 
 post '/jugarRecarga' do
   letra  = params[:letra]
-  @palabraS.jsjdh(letra)
+  @@palabraS.sustituirLetra(letra)
+  @palabraLinea = @@palabraS.cantidadLetras()
   erb :jugar
 end

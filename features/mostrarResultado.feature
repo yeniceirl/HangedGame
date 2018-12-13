@@ -7,3 +7,8 @@ Feature: Mostrar Resultado
         Given estoy pagina del juego
         When completo la palabraSecreta "banana"
         Then deberia mostrar el mensaje "Victoria"
+        
+    Scenario: Usuario Perdedor
+        Given estoy pagina del juego
+        When completo la palabraSecreta "lkjkkk"
+        Then deberia mostrar el mensaje "Perdiste"

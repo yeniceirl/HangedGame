@@ -6,6 +6,9 @@
   <label>Restantes: <%=@Restantes%></label>
 </div>
 <div>
+  <label> Letras Usadas: <b><%= @letrasUsadas %></b> </label>
+</div>
+<div>
   <form method=POST action="/jugarRecarga">
     <label>Escriba una letra</label>
     <input type="text" name="letra">
@@ -19,3 +22,4 @@
 <div>
   <h1> <%= @resultado %> </h1>
 </div>
+<a href= "/">Volver a Jugar</a>

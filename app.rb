@@ -14,6 +14,8 @@ post '/jugar' do
   
   session[:palabraSecreta] = palabra
   session[:palabraSecretaConRayas] = palabraConRayas
+  session[:letrasUsadas] = ""
+  @letrasUsadas = session[:letrasUsadas]
 
   @palabraS = PalabraSecreta.new(palabra)
   @palabraS.palabraSecretaConRayasSet(palabraConRayas)
@@ -31,6 +33,7 @@ end
 
 post '/jugarRecarga' do
   letra  = params[:letra]
+  session[:letrasUsadas] = session[:letrasUsadas] +  letra
   @palabraS = PalabraSecreta.new(session[:palabraSecreta])
   @palabraS.palabraSecretaConRayasSet(session[:palabraSecretaConRayas])
   @palabraS.sustituirLetra(letra)
@@ -49,6 +52,10 @@ post '/jugarRecarga' do
 
   if @palabraS.compararPalabras()
     @resultado = "Victoria"
+  elsif (session[:oportunidades].to_i == 0)
+    @resultado = "Perdiste" + " La palabra correcta es: " +  session[:palabraSecreta]
   end
+  
+  @letrasUsadas = session[:letrasUsadas].to_s
   erb :jugar
 end

@@ -3,7 +3,7 @@ describe PalabraSecreta do
 
 	it "deberia actualizar el estado actual" do
 	palabraSecreta = PalabraSecreta.new("banana")
-	palabra.palabraSecretaConRayasSet("______")
+	palabraSecreta.palabraSecretaConRayasSet("______")
 	palabraSecreta.validarLetra("E").should == false
 	end
 

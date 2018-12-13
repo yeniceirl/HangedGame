@@ -1,25 +1,32 @@
 require 'sinatra'
 require './lib/palabraSecreta.rb'
+enable :sessions
 
 get '/' do
-  
   erb :main  
-    
 end
 post '/jugar' do
   palabra  = params[:palabraSecreta]
-  @palabraS = PalabraSecreta.new(palabra)
-  @palabraLinea = @palabraS.cantidadLetras()
+  palabraConRayas = ""
+  palabra.each_byte do |i|
+    palabraConRayas = palabraConRayas + "_"
+  end
+  
   session[:palabraSecreta] = palabra
-  #session[:palabraSecretaConRayas] = @palabraSecretaConRayas
+  session[:palabraSecretaConRayas] = palabraConRayas
+
+  @palabraS = PalabraSecreta.new(palabra)
+  @palabraS.palabraSecretaConRayasSet(palabraConRayas)
+  @palabraLinea = @palabraS.cantidadLetras()
   erb :jugar
 end
 
 post '/jugarRecarga' do
   letra  = params[:letra]
-  #@palabraS = PalabraSecreta.new(session[:palabraSecreta])
-  #@palabraS.sustituirLetra(letra)
-  #@palabraLinea = @palabraS.cantidadLetras()
-  #erb :jugar
-  "_ a _ a _ a"
+  @palabraS = PalabraSecreta.new(session[:palabraSecreta])
+  @palabraS.palabraSecretaConRayasSet(session[:palabraSecretaConRayas])
+  @palabraS.sustituirLetra(letra)
+  session[:palabraSecretaConRayas] = @palabraS.palabraSecretaConRayas()
+  @palabraLinea = @palabraS.cantidadLetras()
+  erb :jugar
 end

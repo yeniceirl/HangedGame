@@ -2,21 +2,26 @@ class PalabraSecreta
   def initialize(palabra)
     @palabraSecreta = palabra
     @palabraSecretaConRayas = ""
-    @palabraSecreta.each_byte do |i|
-       @palabraSecretaConRayas = @palabraSecretaConRayas + "_"
-    end
+  end
+  
+  def palabraSecretaConRayas
+    @palabraSecretaConRayas
+  end
+  
+  def palabraSecretaConRayasSet(palabra)
+    @palabraSecretaConRayas = palabra
   end
     
   def cantidadLetras()
     cadena = ""
-    @palabraSecretaConRayas.each_byte do |i|
-       cadena = cadena + "_ "
+    @palabraSecretaConRayas.each_char do |i|
+       cadena = cadena + i.to_s + " "
     end
     cadena
   end
   
   def sustituirLetra(letra)
-    for i in 1..@palabraSecreta.length do
+    for i in 0..(@palabraSecreta.length - 1) do
       if @palabraSecreta[i] == letra
         @palabraSecretaConRayas[i] = letra
       end

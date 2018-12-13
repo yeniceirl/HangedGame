@@ -1,5 +1,12 @@
 require './lib/palabraSecreta.rb'
 describe PalabraSecreta do
+
+	it "deberia actualizar el estado actual" do
+	palabraSecreta = PalabraSecreta.new("banana")
+	palabraSecreta.palabraSecretaConRayasSet("______")
+	palabraSecreta.validarLetra("E").should == false
+	end
+
 	it "deberia devolver 6 letras" do
 	 palabra = PalabraSecreta.new("banana")
 	 palabra.palabraSecretaConRayasSet("______")

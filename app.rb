@@ -18,6 +18,14 @@ post '/jugar' do
   @palabraS = PalabraSecreta.new(palabra)
   @palabraS.palabraSecretaConRayasSet(palabraConRayas)
   @palabraLinea = @palabraS.cantidadLetras()
+
+  session[:palabraSecreta] = palabra
+  session[:errores] = "0"
+  session[:oportunidades] = "6"
+
+  @Errores = session[:errores].to_i
+  @Restantes = session[:oportunidades].to_i
+
   erb :jugar
 end
 
@@ -28,5 +36,17 @@ post '/jugarRecarga' do
   @palabraS.sustituirLetra(letra)
   session[:palabraSecretaConRayas] = @palabraS.palabraSecretaConRayas()
   @palabraLinea = @palabraS.cantidadLetras()
+
+  if @palabraS.validarLetra(letra) == false
+      @Errores = (session[:errores].to_i + 1)
+      session[:errores] = @Errores
+      @Restantes = (session[:oportunidades].to_i - 1)
+      session[:oportunidades] = @Restantes
+   else
+      @Errores = session[:errores].to_i
+      @Restantes = session[:oportunidades].to_i
+  end
+
   erb :jugar
+
 end

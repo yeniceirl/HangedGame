@@ -1,21 +1,120 @@
+<html>
+    <head>
+        <title>El Ahorcado</title>
+		<link href="estilo.css" rel="stylesheet" type="text/css"/>
+
+
+		<style>
+			.container{
+		margin:0 auto;
+		width:80%;
+		background:white;
+		padding:20px;
+		}
+
+	#gameField{
+		position:relative;
+		margin-top:42px;
+		height:500px;
+		color:#fff;
+		-webkit-box-shadow: 0px 5px 10px #0b2228;
+		box-shadow: 0px 5px 10px #0b2228;
+		background: #384180;
+		background: -moz-linear-gradient(top, #384180 0%, #384180 24%, #0c2856 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, #384180), color-stop(24%, #384180), color-stop(100%, #0c2856));
+		background: -webkit-linear-gradient(top, #384180 0%, #384180 24%, #0c2856 100%);
+		background: -o-linear-gradient(top, #384180 0%, #384180 24%, #0c2856 100%);
+		background: -ms-linear-gradient(top, #384180 0%, #384180 24%, #0c2856 100%);
+		background: linear-gradient(to bottom, #384180 0%, #384180 24%, #0c2856 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#384180', endColorstr='#0c2856', GradientType=0 );
+		}
+
+		body {
+		font-family: arial, Helvetica, sans-serif;
+		background: #5555ff;
+		}
+
+		.wordWrap{
+			position:relative;
+			width:55%;
+			margin:auto;
+			height:60px;
+			background:rgba(215, 227, 244, .1);
+			border-radius: 6px;
+			text-align:center;
+			color: rgba(255, 255, 255, 1);
+			font-weight:700;
+			line-height: 47px;
+			margin-bottom:30px;
+			font-weight:700;
+			font-size:40px;
+	}	
+
+		.messageField{
+			padding-bottom: 5px;
+			font-weight:700;
+		}
+
+		.btnWrap{
+		width:140px;
+
+	}
+
+
+	.playAgain{
+		background: #ff145d;
+		border-bottom:3px solid #800019;
+		-webkit-box-shadow: 0px 0px 7px #080d1c;
+		box-shadow: 0px 0px 7px #080d1c;
+	}
+
+	.btn{
+	position: relative;
+	width:140px;
+	padding:10px;
+	border-radius: 6px;
+	border:none;
+	color:#fff;
+	font-weight:700;
+	font-size:12px;
+	padding:15px 25px;
+	outline: none;
+	cursor:pointer;
+}
+
+.btn:active{
+	top:3px;
+	border-bottom-width: 1px;
+}
+		</style>
+    </head>
+    <body>
+	<div class="container" id="gameField">
+
 <h1>El Ahorcado</h1>
-<div>
+<div class="messageField">
   <label>Errores: <%= @Errores %> </label>
 </div>
-<div>
+<div class="messageField">
   <label>Restantes: <%=@Restantes%></label>
 </div>
 <div>
   <form method=POST action="/jugarRecarga">
     <label>Escriba una letra</label>
     <input type="text" name="letra">
-    <input type="submit" value="Adivinar">
+    <div class='btnWrap'><input class="playAgain" type="submit" value="Adivinar"></div>
   </form>
 </div>
-<div>
+<div class="wordWrap">
   <h2> <%= @palabraLinea %> </h2>
 </div>
 
-<div>
+<div class="messageField">
   <h1> <%= @resultado %> </h1>
 </div>
+
+</div>
+
+</body>
+
+</html>

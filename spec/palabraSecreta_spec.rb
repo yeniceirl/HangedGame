@@ -13,6 +13,11 @@ describe PalabraSecreta do
 	it "deberia actualizar el estado actual" do
      palabraSecreta = PalabraSecreta.new("banana")
      palabraSecreta.validarLetra("E").should == false
+
+	it "deberia reemplazar la letra a" do
+	 palabra = PalabraSecreta.new("banana")
+	 palabra.sustituirLetra("a").should == "_a_a_a"
+
 	end
 	
 end

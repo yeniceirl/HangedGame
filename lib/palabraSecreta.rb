@@ -41,4 +41,8 @@ class PalabraSecreta
   	end
   end
   
+  def compararPalabras
+    @palabraSecreta == @palabraSecretaConRayas
+  end
+  
 end

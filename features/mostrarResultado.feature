@@ -5,5 +5,5 @@ Feature: Mostrar Resultado
     
     Scenario: Usuario Ganador
         Given estoy pagina del juego
-        When completo la "palabraSecreta"
-        Then deberia mostrar el mensaje "Victoria" y mostrar la palabra secreta
+        When completo la palabraSecreta "banana"
+        Then deberia mostrar el mensaje "Victoria"

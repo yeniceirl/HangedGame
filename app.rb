@@ -47,6 +47,8 @@ post '/jugarRecarga' do
       @Restantes = session[:oportunidades].to_i
   end
 
+  if @palabraS.compararPalabras()
+    @resultado = "Victoria"
+  end
   erb :jugar
-
 end
